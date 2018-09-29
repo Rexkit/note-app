@@ -7,8 +7,9 @@ class Notes extends Component {
   render() {
     return (
       <div className={classes.Notes}>
-        <Note header="HeaderOfNote">Some text of note</Note>
-        <Note header="HeaderOfNote2">Some text of note</Note>
+        {this.props.data.map(note => (
+          <Note header={note.header}>{note.text}</Note>
+        ))}
       </div>
     );
   }
