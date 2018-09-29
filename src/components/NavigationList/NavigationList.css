@@ -1,0 +1,13 @@
+.NavigationList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  height: 100%;
+}
+
+.NavigationList li:first-of-type {
+  border-left: none;
+}

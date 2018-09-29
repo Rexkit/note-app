@@ -1,0 +1,27 @@
+.SearchBar {
+  display: flex;
+}
+
+.SearchBar input[type=text] {
+  outline: none;
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.small input[type=text] {
+  width: 10rem;
+}
+
+.medium input[type=text] {
+  width: 20rem;
+}
+
+.large input[type=text] {
+  width: 30rem;
+}
+
+ion-icon {
+  height: inherit;
+  font-size: 3rem;
+}

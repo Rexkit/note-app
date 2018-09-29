@@ -1,0 +1,6 @@
+.Notes {
+  display: inline-flex;
+  flex-direction: column;
+  height: auto;
+  border-right: 1px solid grey;
+}

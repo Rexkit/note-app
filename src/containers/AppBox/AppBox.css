@@ -1,0 +1,7 @@
+.AppBox {
+  margin: 0 auto;
+  width: 70%;
+  height: 70%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+}
