@@ -1,6 +1,6 @@
 .Note {
-  padding: 0.5rem;
-  width: 30rem;
+  display: inline-block;
+  width: 25rem;
   text-align: center;
   border-bottom: 1px solid grey;
 }

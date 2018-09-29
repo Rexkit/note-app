@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,4 +9,8 @@ body {
   font-family: sans-serif;
   box-sizing: border-box;
   overflow-y: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
