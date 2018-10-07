@@ -8,7 +8,6 @@ import * as actions from '../../store/actions/NotePad';
 
 class NotePad extends Component {
   componentDidMount() {
-    console.log(this.props);
     this.props.onInitNotes();
   }
 

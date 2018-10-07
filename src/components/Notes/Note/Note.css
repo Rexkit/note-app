@@ -3,4 +3,10 @@
   width: 25rem;
   text-align: center;
   border-bottom: 1px solid grey;
+  user-select: none;
+}
+
+.Note:hover {
+  background-color: #ccc;
+  transition: .3s all ease;
 }

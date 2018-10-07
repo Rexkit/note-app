@@ -14,7 +14,6 @@ const setNotes = (state, action) => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SET_NOTES:
-      console.log(action.notes);
       return setNotes(state, action);
     default:
       return state;
