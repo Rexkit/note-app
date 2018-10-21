@@ -15,7 +15,7 @@ const Note = (props) => {
 
 
   return (
-    <div className={classes.Note}>
+    <div className={classes.Note} onClick={() => props.clicked(props.header, props.children)}>
       <h3>{props.header}</h3>
       <p>{refactorString(props.children)}</p>
     </div>

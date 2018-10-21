@@ -1,0 +1,46 @@
+.TextInput {
+  display: inline-flex;
+  position: relative;
+  width: 75%;
+  height: 100%;
+}
+
+.TextInputButtonsBlock {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.TextInputButtonsBlock button {
+  background: #0069ed;
+  color: #ffffff;
+  text-decoration: none;
+  width: 10rem;
+  margin-left: 1rem;
+  padding: .5rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+  transform 150ms ease;
+}
+
+.TextInputButtonsBlock button:hover,
+.TextInputButtonsBlock button:focus {
+  background: #0053ba;
+}
+
+.TextInputButtonsBlock button:active {
+  transform: scale(0.99);
+}
+
+.TextInput textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  -moz-appearance: none;
+  border-bottom-right-radius: 5px;
+  border: none;
+}

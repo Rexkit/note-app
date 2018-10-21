@@ -1,26 +1,31 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 
-import Notes from '../../components/Notes/Notes';
 import Toolbar from '../../components/Toolbar/Toolbar';
 
 import * as actions from '../../store/actions/NotePad';
+import MainPad from "../../components/MainPad/MainPad";
 
 class NotePad extends Component {
   componentDidMount() {
     this.props.onInitNotes();
   }
 
+  textInputHandler = (note) => {
+    console.log(note);
+    this.props.onUpdateNote(note);
+  };
+
   render() {
-    let notepad = <p>Wait</p>;
+    let mainpad = <p>Wait</p>;
     if (this.props.notes) {
-      notepad = <Notes data={this.props.notes} />;
+      mainpad = <MainPad clicked={(note) => this.textInputHandler(note)} notes={this.props.notes} />
     }
 
     return (
       <Fragment>
         <Toolbar />
-        {notepad}
+        {mainpad}
       </Fragment>
     );
   }
@@ -33,7 +38,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onInitNotes: () => dispatch(actions.initNotes())
+  onInitNotes: () => dispatch(actions.initNotes()),
+  onUpdateNote: (note) => dispatch(actions.updateNote(note))
 });
 
 

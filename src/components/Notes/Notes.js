@@ -8,7 +8,7 @@ class Notes extends Component {
     return (
       <div className={classes.Notes}>
         {this.props.data.map(note => (
-          <Note key={note.header} header={note.header}>{note.text}</Note>
+          <Note clicked={this.props.clicked} key={note.header} header={note.header}>{note.text}</Note>
         ))}
       </div>
     );
