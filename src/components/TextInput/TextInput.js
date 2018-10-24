@@ -7,14 +7,13 @@ class TextInput extends Component {
     value: this.props.textData
   };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState, this.state.value);
-    if (this.state.value === '') {
-      return true;
-      //TODO!!!!!!!
-    }
-    return !(nextProps.textData === nextState.value && nextState.value !== this.state.value);
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log(nextProps, nextState, this.state.value);
+  //   if (this.state.value === '') {
+  //     return true;
+  //   }
+  //   return !(nextProps.textData === nextState.value && nextState.value !== this.state.value);
+  // }
 
   componentWillReceiveProps(newProps) {
     this.setState({value: newProps.textData});

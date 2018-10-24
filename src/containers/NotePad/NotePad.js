@@ -17,7 +17,7 @@ class NotePad extends Component {
   };
 
   render() {
-    let mainpad = <p>Wait</p>;
+    let mainpad = <p>Loading notes...</p>;
     if (this.props.notes) {
       mainpad = <MainPad clicked={(note) => this.textInputHandler(note)} notes={this.props.notes} />
     }

@@ -20,6 +20,7 @@ class MainPad extends Component {
       header: this.state.currentHeader,
       text: noteText
     });
+    this.setState({currentText: noteText});
   };
 
   render() {

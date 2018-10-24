@@ -17,7 +17,7 @@ export const updateNoteSuccess = (note) => {
 
 export const updateNote = (note) => {
   return dispatch => {
-    axios.patch(`https://note-app-c9137.firebaseio.com/notes/${note.header}.json`, note)
+    return axios.patch(`https://note-app-c9137.firebaseio.com/notes/${note.header}.json`, note)
       .then(res => {
         console.log(res);
         dispatch(updateNoteSuccess(note));
