@@ -15,12 +15,25 @@ export const updateNoteSuccess = (note) => {
   }
 };
 
+export const showNotification = () => {
+  return {
+    type: actionTypes.SHOW_NOTIFICATION
+  }
+};
+
+export const closeNotification = () => {
+  return {
+    type: actionTypes.CLOSE_NOTIFICATION
+  }
+};
+
 export const updateNote = (note) => {
   return dispatch => {
     return axios.patch(`https://note-app-c9137.firebaseio.com/notes/${note.header}.json`, note)
       .then(res => {
         console.log(res);
         dispatch(updateNoteSuccess(note));
+        dispatch(showNotification());
       })
       .catch(err => {
         console.log(err);

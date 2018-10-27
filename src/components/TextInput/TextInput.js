@@ -7,6 +7,14 @@ class TextInput extends Component {
     value: this.props.textData
   };
 
+  timerValue = null;
+
+  timer() {
+    this.timerValue = setTimeout(() => {
+      this.props.clicked(this.state.value);
+    }, 2000);
+  }
+
   // shouldComponentUpdate(nextProps, nextState) {
   //   console.log(nextProps, nextState, this.state.value);
   //   if (this.state.value === '') {
@@ -20,8 +28,11 @@ class TextInput extends Component {
   }
 
   handleChange = (event) => {
+    if (this.timerValue) {
+      clearTimeout(this.timerValue);
+    }
     this.setState({value: event.target.value});
-    console.log(this.state.value);
+    this.timer();
   };
 
   render() {

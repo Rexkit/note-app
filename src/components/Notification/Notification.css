@@ -1,0 +1,12 @@
+.Notification {
+  position: absolute;
+  width: 30rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border: 1px solid black;
+  background-color: mediumseagreen;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}

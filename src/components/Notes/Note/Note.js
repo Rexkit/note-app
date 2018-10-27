@@ -6,6 +6,9 @@ const Note = (props) => {
     let string = str.toString();
     if (string.length > 20) {
       const lastIndex = string.indexOf(' ', 20);
+      if (lastIndex === -1) {
+        return string;
+      }
       string = string.substr(0, lastIndex);
       string = string.concat(' ...');
     }
